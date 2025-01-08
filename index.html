@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Helvetic IT | Ihr Web-Auftritt Partner</title>
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body class="bg-gray-50 text-gray-800 font-sans antialiased">
+    <!-- Navigation -->
+    <nav
+      class="bg-white shadow-lg py-4 px-6 md:px-12 flex justify-between items-center"
+    >
+      <h4 class="text-2xl font-bold text-slate-800">Helvetic IT</h4>
+      <ul class="flex space-x-6 text-gray-700">
+        <li class="hover:text-blue-600"><a href="#projects">Projekte</a></li>
+        <li class="hover:text-blue-600"><a href="#about">Über uns</a></li>
+        <li class="hover:text-blue-600"><a href="#contact">Kontakt</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="bg-slate-800 text-white py-20 px-6 md:px-12 text-center">
+      <h1 class="text-5xl font-extrabold">Helvetic IT</h1>
+      <h3 class="text-2xl md:text-3xl mt-4 font-light">Ihr IT-Partner</h3>
+      <p class="mt-6 text-lg md:text-xl">
+        Bringt kreative Ideen in die digitale Welt.
+      </p>
+    </div>
+
+    <!-- Portfolio Section -->
+    <div id="projects" class="py-16 px-6 md:px-12">
+      <h2 class="text-3xl font-bold text-gray-800 mb-6">Unsere Arbeit</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Projekt 1 -->
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+          <img
+            src="img/menzu-min.png"
+            alt="Screenshot von Menzu Pizza"
+            class="w-full h-48 object-cover object-top"
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">menzu-pizza.ch</h3>
+            <p class="text-gray-600 mb-4">
+              Eine moderne Website für Menzu Pizza.
+            </p>
+            <a
+              href="https://menzu-pizza.ch"
+              target="_blank"
+              class="text-blue-600 font-semibold hover:underline"
+            >
+              Projekt ansehen
+            </a>
+          </div>
+        </div>
+
+        <!-- Projekt 2 -->
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+          <img
+            src="img/halde-min.png"
+            alt="Screenshot von Halde20"
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">halde20.ch</h3>
+            <p class="text-gray-600 mb-4">Stilvolles Webdesign für Halde20.</p>
+            <a
+              href="https://www.halde20.ch/"
+              target="_blank"
+              class="text-blue-600 font-semibold hover:underline"
+            >
+              Projekt ansehen
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- About Section -->
+    <div id="about" class="py-16 px-6 md:px-12 bg-gray-100">
+      <h2 class="text-3xl font-bold text-gray-800 mb-6">Über uns</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Card for yourself -->
+        <div class="bg-white shadow-lg rounded-lg p-6 text-center">
+          <img
+            src="img/matteo-min.JPEG"
+            alt="Matteo"
+            class="w-32 h-32 rounded-full mx-auto mb-4"
+          />
+          <h3 class="text-xl font-semibold">Matteo Jakob</h3>
+          <p class="text-gray-400 mt-2 text-sm">
+            Applikationsentwickler<br />
+            Informatikmittelschüler Aarau (IMS)
+          </p>
+          <p class="text-gray-600 mt-2">
+            Spezialisierung auf Applikationsentwicklung und erste Erfahrungen in
+            der Entwicklung und Optimierung von Software- und Weblösungen.
+          </p>
+        </div>
+        <!-- Card for your colleague -->
+        <div class="bg-white shadow-lg rounded-lg p-6 text-center">
+          <img
+            src="img/Elbish-min.JPEG"
+            alt="Elbish"
+            class="w-32 h-32 rounded-full mx-auto mb-4 object-center object-cover"
+          />
+          <h3 class="text-xl font-semibold">Elbish Bhusal</h3>
+          <p class="text-gray-400 mt-2 text-sm">
+            Applikationsentwickler<br />
+            Informatikmittelschüler Aarau (IMS)
+          </p>
+
+          <p class="text-gray-600 mt-2">
+            Fokus auf Softwareentwicklung und Implementierung von IT-Lösungen
+            für anspruchsvolle Projekte.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact" class="bg-gray-100 py-16 px-6 md:px-12">
+      <h2 class="text-3xl font-bold text-gray-800 mb-6">Kontakt</h2>
+      <p class="text-gray-600 text-lg mb-4">
+        Haben Sie Fragen? Kontaktieren Sie uns!
+      </p>
+      <form
+        action="send_email.php"
+        method="POST"
+        class="bg-white shadow-lg rounded-lg p-6 md:w-2/3 lg:w-1/2 mx-auto"
+      >
+        <div class="mb-4">
+          <label class="block text-gray-700 font-semibold mb-2" for="name"
+            >Name</label
+          >
+          <input
+            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Ihr Name"
+            required
+          />
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 font-semibold mb-2" for="email"
+            >E-Mail</label
+          >
+          <input
+            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Ihre E-Mail-Adresse"
+            required
+          />
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 font-semibold mb-2" for="message"
+            >Nachricht</label
+          >
+          <textarea
+            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            id="message"
+            name="message"
+            placeholder="Ihre Nachricht"
+            rows="4"
+            required
+          ></textarea>
+        </div>
+        <button
+          type="submit"
+          class="w-full bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        >
+          Senden
+        </button>
+      </form>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-400 py-8 text-center">
+      <p>Helvetic IT &copy; 2025. Alle Rechte vorbehalten.</p>
+      <p>Made in Switzerland with ❤️ by Helvetic IT</p>
+    </footer>
+  </body>
+</html>
