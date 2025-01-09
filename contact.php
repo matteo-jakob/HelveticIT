@@ -13,14 +13,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         // E-Mail senden
         if (mail($to, $subject, $body, $headers)) {
-            echo "Danke, Ihre Nachricht wurde gesendet!";
+            echo json_encode(["status" => "success", "message" => "Danke, Ihre Nachricht wurde gesendet!"]);
         } else {
-            echo "Entschuldigung, Ihre Nachricht konnte nicht gesendet werden.";
+            echo json_encode(["status" => "error", "message" => "Entschuldigung, Ihre Nachricht konnte nicht gesendet werden."]);
         }
     } else {
-        echo "Bitte füllen Sie alle Felder korrekt aus.";
+        echo json_encode(["status" => "error", "message" => "Bitte füllen Sie alle Felder korrekt aus."]);
     }
 } else {
-    echo "Ungültige Anfrage.";
+    echo json_encode(["status" => "error", "message" => "Ungültige Anfrage."]);
 }
 ?>
