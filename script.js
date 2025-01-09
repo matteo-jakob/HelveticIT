@@ -26,7 +26,7 @@ document.querySelector("form").addEventListener("submit", async (e) => {
   const formData = new FormData(e.target); // Holt die Formulardaten
 
   try {
-    const response = await fetch("send_email.php", {
+    const response = await fetch("contact.php", {
       method: "POST",
       body: formData,
     });
