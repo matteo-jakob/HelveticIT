@@ -1,4 +1,8 @@
-#HelveticIT
+# HelveticIT
 
-Running Tailwind
-npx tailwindcss -i ./styles.css -o ./output.css --watch
+(helveticit.ch)[helveticit.ch]
+
+## Getting started
+
+`cd src`
+`npx tailwindcss -i ./styles.css -o ./output.css --watch`
