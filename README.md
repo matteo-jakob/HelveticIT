@@ -4,5 +4,4 @@
 
 ## Getting started
 
-`cd src`
 `npx tailwindcss -i ./styles.css -o ./output.css --watch`
