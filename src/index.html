@@ -15,7 +15,8 @@
       rel="stylesheet"
     />
   </head>
-  <body class="bg-gray-50 text-gray-800 font-sans antialiased scroll-pt-10">
+
+  <body class="bg-gray-50 text-gray-800 font-sans antialiased">
     <!-- Popup -->
     <div
       id="popup"
@@ -79,10 +80,9 @@
 
     <!-- Hero Section -->
     <div
-      class="bg-slate-800 text-white py-32 px-6 md:px-12 text-center relative overflow-hidden"
+      class="bg-slate-800 text-white py-32 px-6 text-left flex flex-col md:px-12"
     >
-      <div class="absolute inset-0 bg-slate-800 opacity-50"></div>
-      <div class="relative z-10">
+      <div>
         <h1 class="text-5xl font-extrabold mb-4" data-aos="fade-down">
           Helvetic IT
         </h1>
@@ -91,28 +91,132 @@
           data-aos="fade-down"
           data-aos-delay="100"
         >
-          Ihr IT-Partner
+          Ihr IT-Partner und Webagentur
         </h3>
         <p
           class="text-lg md:text-xl mb-8"
           data-aos="fade-down"
           data-aos-delay="200"
-        >
-          Bringt kreative Ideen in die digitale Welt.
-        </p>
+        ></p>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="300" class="mt-2">
         <a
-          href="#contact"
-          class="bg-slate-800 text-slate-400 py-3 px-8 rounded-lg border-slate-400 border-2 hover:bg-slate-700 transition duration-300"
-          data-aos="fade-up"
-          data-aos-delay="300"
+          href="#about"
+          class="bg-slate-800 text-slate-400 py-3 px-8 w-40 rounded-lg border-slate-400 border-2 hover:bg-slate-700 transition duration-300 text-center"
         >
-          Jetzt Beratung sichern
+          Über uns
         </a>
       </div>
     </div>
 
+    <!-- About Us Section -->
+    <div id="about" class="py-16 px-6 md:px-12 flex flex-col items-center">
+      <h2
+        class="text-3xl font-bold text-gray-800 mb-6 text-center"
+        data-aos="fade-up"
+      >
+        Über uns
+      </h2>
+      <p
+        class="text-gray-600 text-lg mb-6 text-center max-w-3xl mx-auto"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
+        Wir sind Helvetic IT, ein leidenschaftliches Team aus Entwicklern und
+        Kreativen, das sich auf moderne Weblösungen spezialisiert. Unsere
+        Mission ist es, innovative digitale Erlebnisse zu schaffen, die
+        begeistern.
+      </p>
+      <div data-aos="fade-up" class="m-10">
+        <a
+          href="#contact"
+          class="bg-slate-700 text-slate-300 py-3 px-8 w-64 rounded-lg border-slate-300 border-2 hover:bg-slate-600 hover:border-slate-500 transition-all duration-300 text-center"
+        >
+          Jetzt Beratung sichern
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+        <!-- Team Cards -->
+        <div
+          class="bg-white shadow-lg rounded-lg p-6 text-center transition-all hover:scale-105 duration-300 m-4"
+          data-aos="fade-up"
+        >
+          <img
+            src="img/matteo-min.JPEG"
+            alt="Matteo"
+            class="w-32 h-32 rounded-full mx-auto mb-4 object-center object-cover"
+          />
+          <h3 class="text-xl font-semibold">Matteo Jakob</h3>
+          <p class="text-gray-400 mt-2 text-sm">
+            Applikationsentwickler <br />
+            Informatikmittelschule Aarau
+          </p>
+          <a
+            href="https://ch.linkedin.com/in/matteo-jakob-89b8a3263"
+            target="_blank"
+            class="text-blue-500 mt-4 inline-block p-2"
+          >
+            <i
+              class="fab fa-linkedin text-2xl hover:text-blue-700 transition-all duration-200 hover:scale-110"
+            ></i>
+          </a>
+        </div>
+        <div
+          class="bg-white shadow-lg rounded-lg p-6 text-center transform hover:scale-105 transition duration-300 m-4"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <img
+            src="img/Elbish-min.JPEG"
+            alt="Elbish"
+            class="w-32 h-32 rounded-full mx-auto mb-4 object-center object-cover"
+          />
+          <h3 class="text-xl font-semibold">Elbish Bhusal</h3>
+          <p class="text-gray-400 mt-2 text-sm">
+            Applikationsentwickler <br />
+            Informatikmittelschule Aarau
+          </p>
+          <a
+            href="https://ch.linkedin.com/in/elbish-bhusal-a138a41a4"
+            target="_blank"
+            class="text-blue-500 mt-4 inline-block p-2"
+          >
+            <i
+              class="fab fa-linkedin text-2xl hover:text-blue-700 transition-all duration-200 hover:scale-110"
+            ></i>
+          </a>
+        </div>
+        <div
+          class="bg-white shadow-lg rounded-lg p-6 text-center transform hover:scale-105 transition duration-300 m-4"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <img
+            src="img/Alek-min.jpeg"
+            alt="Alek"
+            class="w-32 h-32 rounded-full mx-auto mb-4 object-center object-cover"
+          />
+          <h3 class="text-xl font-semibold">Alek Cvetkovski</h3>
+          <p class="text-gray-400 mt-2 text-sm">
+            Marketing <br />
+            Informatikmittelschule Aarau
+          </p>
+          <a
+            href="https://ch.linkedin.com/in/alek-cvetkovski-98a964289"
+            target="_blank"
+            class="text-blue-500 mt-4 inline-block p-2"
+          >
+            <i
+              class="fab fa-linkedin text-2xl hover:text-blue-700 transition-all duration-200 hover:scale-110"
+            ></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
     <!-- Portfolio Section -->
-    <div id="projects" class="py-16 px-6 md:px-12">
+    <div id="projects" class="py-16 px-6 md:px-12 bg-gray-100">
       <h2
         class="text-3xl font-bold text-gray-800 mb-6 text-center"
         data-aos="fade-up"
@@ -195,59 +299,6 @@
       </div>
     </div>
 
-    <!-- About Section -->
-    <div id="about" class="py-16 px-6 md:px-12 bg-gray-100">
-      <h2
-        class="text-3xl font-bold text-gray-800 mb-6 text-center"
-        data-aos="fade-up"
-      >
-        Unser Team
-      </h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-        <!-- Card 1 -->
-        <div
-          class="bg-white shadow-lg rounded-lg p-6 text-center transform hover:scale-105 transition duration-300"
-          data-aos="fade-up"
-        >
-          <img
-            src="img/matteo-min.JPEG"
-            alt="Matteo"
-            class="w-32 h-32 rounded-full mx-auto mb-4"
-          />
-          <h3 class="text-xl font-semibold">Matteo Jakob</h3>
-          <p class="text-gray-400 mt-2 text-sm">Applikationsentwickler</p>
-        </div>
-        <!-- Card 2 -->
-        <div
-          class="bg-white shadow-lg rounded-lg p-6 text-center transform hover:scale-105 transition duration-300"
-          data-aos="fade-up"
-          data-aos-delay="100"
-        >
-          <img
-            src="img/Elbish-min.JPEG"
-            alt="Elbish"
-            class="w-32 h-32 rounded-full mx-auto mb-4 object-center object-cover"
-          />
-          <h3 class="text-xl font-semibold">Elbish Bhusal</h3>
-          <p class="text-gray-400 mt-2 text-sm">Applikationsentwickler</p>
-        </div>
-        <!-- Card 3 -->
-        <div
-          class="bg-white shadow-lg rounded-lg p-6 text-center transform hover:scale-105 transition duration-300"
-          data-aos="fade-up"
-          data-aos-delay="200"
-        >
-          <img
-            src="img/Alek-min.jpeg"
-            alt="Elbish"
-            class="w-32 h-32 rounded-full mx-auto mb-4 object-center object-cover"
-          />
-          <h3 class="text-xl font-semibold">Alek Cvetkovski</h3>
-          <p class="text-gray-400 mt-2 text-sm">Marketing</p>
-        </div>
-      </div>
-    </div>
-
     <!-- Contact Section -->
     <div id="contact" class="py-16 px-6 md:px-12">
       <h2
@@ -311,7 +362,7 @@
         </div>
         <button
           type="submit"
-          class="w-full bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300"
+          class="w-full bg-slate-800 text-white font-semibold py-3 px-8 rounded-lg hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-500 transition-all duration-300 text-center"
         >
           Senden
         </button>
