@@ -795,6 +795,14 @@ video {
   height: 25%;
 }
 
+.h-\[20\%\] {
+  height: 20%;
+}
+
+.h-\[40\%\] {
+  height: 40%;
+}
+
 .w-32 {
   width: 8rem;
 }
@@ -940,6 +948,14 @@ video {
 
 .gap-8 {
   gap: 2rem;
+}
+
+.self-start {
+  align-self: flex-start;
+}
+
+.self-end {
+  align-self: flex-end;
 }
 
 .self-center {
