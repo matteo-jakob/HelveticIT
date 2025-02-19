@@ -1778,6 +1778,10 @@ video {
     height: auto;
   }
 
+  .md\:h-\[calc\(100vh-5rem\)\] {
+    height: calc(100vh - 5rem);
+  }
+
   .md\:w-2\/3 {
     width: 66.666667%;
   }

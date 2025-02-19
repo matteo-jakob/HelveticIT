@@ -115,7 +115,10 @@ const navbar = document.querySelector("nav");
 window.addEventListener("scroll", () => {
   let scrollTop = window.scrollY;
 
-  if (scrollTop > lastScrollTop) {
+  if (scrollTop <= 10) {
+    // Wenn ganz oben, Navbar sicher anzeigen
+    navbar.style.transform = "translateY(0)";
+  } else if (scrollTop > lastScrollTop) {
     // Nach unten scrollen -> Navbar ausblenden
     navbar.style.transform = "translateY(-100%)";
   } else {
@@ -123,5 +126,5 @@ window.addEventListener("scroll", () => {
     navbar.style.transform = "translateY(0)";
   }
 
-  lastScrollTop = scrollTop;
+  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Verhindert negative Werte
 });
