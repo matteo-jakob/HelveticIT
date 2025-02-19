@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -37,9 +37,15 @@
 
     <!-- Navigation -->
     <nav
-      class="bg-white shadow-lg py-4 px-6 md:px-12 flex justify-between items-center top-0 z-50"
+      class="bg-white shadow-lg py-4 px-6 md:px-12 flex justify-between items-center fixed w-screen top-0 z-30 transform transition-all ease-out duration-300"
     >
-      <h4 class="text-2xl font-bold text-slate-800">Helvetic IT</h4>
+      <a href="#hero-section">
+        <img
+          src="img/Logo.png"
+          alt="Logo"
+          class="h-16 md:h-20 lg::h-28 mr-10"
+        />
+      </a>
 
       <!-- Hamburger Button (for Mobile) -->
       <button
@@ -58,36 +64,51 @@
       <!-- Navigation Links -->
       <ul
         id="mobile-menu"
-        class="hidden md:flex md:space-x-6 text-gray-700 flex-col md:flex-row absolute md:static top-16 left-0 w-full md:w-auto bg-slate-100 md:bg-transparent shadow-lg md:shadow-none z-40 transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out"
+        class="hidden h-[calc(100vh-5rem)] md:h-auto md:flex md:space-x-6 text-gray-700 flex-col md:flex-row absolute md:static top-24 z-20 left-0 w-full md:w-auto bg-slate-100 md:bg-transparent shadow-lg md:shadow-none transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out"
       >
         <li
-          class="hover:bg-slate-200 md:hover:bg-transparent hover:text-blue-600 text-lg md:text-base"
+            class="border-b-2 h-[25%] text-4xl flex justify-center text-red-500 border-red-500 bg-red-50 md:border-0 md:bg-inherit hover:bg-red-100 md:hover:bg-transparent hover:text-red-600 md:text-base transition duration-200 ease-in"
         >
-          <a href="#projects" class="block px-6 py-4 w-full h-full">Projekte</a>
+          <a href="#about" class="flex px-6 md:px-0 py-4 w-full h-full"
+            ><p class="self-center">Über uns</p></a
+          >
         </li>
         <li
-          class="hover:bg-slate-200 md:hover:bg-transparent hover:text-blue-600 text-lg md:text-base"
+            class="border-b-2 h-[25%] text-4xl flex justify-center text-red-500 border-red-500 bg-red-50 md:border-0 md:bg-inherit hover:bg-red-100 md:hover:bg-transparent hover:text-red-600 md:text-base transition duration-200 ease-in"
         >
-          <a href="#about" class="block px-6 py-4 w-full h-full">Über uns</a>
+          <a href="#reviews" class="px-6 md:px-0 py-4 w-full h-full flex"
+            ><p class="self-center">Rezensionen</p></a
+          >
         </li>
         <li
-          class="hover:bg-slate-200 md:hover:bg-transparent hover:text-blue-600 text-lg md:text-base"
+            class="border-b-2 h-[25%] text-4xl flex justify-center text-red-500 border-red-500 bg-red-50 md:border-0 md:bg-inherit hover:bg-red-100 md:hover:bg-transparent hover:text-red-600 md:text-base transition duration-200 ease-in"
         >
-          <a href="#contact" class="block px-6 py-4 w-full h-full">Kontakt</a>
+          <a href="#projects" class="flex px-6 md:px-0 py-4 w-full h-full"
+            ><p class="self-center">Projekte</p></a
+          >
+        </li>
+
+        <li
+            class="border-b-2 h-[25%] text-4xl flex justify-center text-red-500 border-red-500 bg-red-50 md:border-0 md:bg-inherit hover:bg-red-100 md:hover:bg-transparent hover:text-red-600 md:text-base transition duration-200 ease-in"
+        >
+          <a href="#contact" class="flex px-6 md:px-0 py-4 w-full h-full"
+            ><p class="self-center">Kontakt</p></a
+          >
         </li>
       </ul>
     </nav>
 
     <!-- Hero Section -->
     <div
-      class="bg-slate-800 text-white py-32 px-6 text-left flex flex-col md:text-center md:px-12"
+      class="bg-gray-800 text-gray-50 py-32 px-6 text-left flex flex-col md:text-center md:px-12 pt-64"
+      id="hero-section"
     >
       <div>
         <h1 class="text-5xl font-extrabold mb-4" data-aos="fade-down">
           Helvetic IT
         </h1>
         <h3
-          class="text-2xl md:text-3xl font-light mb-6"
+          class="text-2xl md:text-2xl font-light mb-6"
           data-aos="fade-down"
           data-aos-delay="100"
         >
@@ -99,12 +120,16 @@
           data-aos-delay="200"
         ></p>
       </div>
-      <div data-aos="fade-up" data-aos-delay="300" class="mt-2">
+      <div
+        data-aos="fade-up"
+        data-aos-delay="300"
+        class="mt-2 w-full flex justify-normal md:justify-center"
+      >
         <a
           href="#about"
-          class="bg-slate-800 text-slate-400 py-3 px-8 w-40 rounded-lg border-slate-400 border-2 hover:bg-slate-700 transition duration-300 text-center"
+          class="bg-transparent text-red-400 py-3 px-8 w-40 flex rounded-lg border-red-400 border-2 hover:bg-red-600 hover:bg-opacity-20 hover:scale-110 transition duration-300 text-center"
         >
-          Über uns
+          <p class="w-full">Über uns</p>
         </a>
       </div>
     </div>
@@ -118,7 +143,7 @@
         Über uns
       </h2>
       <p
-        class="text-gray-600 text-lg mb-6 text-center max-w-3xl mx-auto"
+        class="text-gray-600 text-lg text-center max-w-3xl mx-auto"
         data-aos="fade-up"
         data-aos-delay="100"
       >
@@ -127,12 +152,12 @@
         Mission ist es, innovative digitale Erlebnisse zu schaffen, die
         begeistern.
       </p>
-      <div data-aos="fade-up" class="m-10">
+      <div data-aos="fade-up" class="mt-6 mb-10">
         <a
           href="#contact"
-          class="bg-slate-700 text-slate-300 py-3 px-8 w-64 rounded-lg hover:bg-slate-600 transition-all duration-300 text-center"
+          class="border-2 flex border-gray-800 text-gray-800 shadow-md py-3 px-8 w-64 rounded-lg hover:bg-gray-200 transition-all hover:scale-110 duration-300 text-center"
         >
-          Jetzt Beratung sichern
+          <p class="w-full">Jetzt Beratung sichern</p>
         </a>
       </div>
 
@@ -152,10 +177,10 @@
           <a
             href="https://ch.linkedin.com/in/matteo-jakob-89b8a3263"
             target="_blank"
-            class="text-blue-500 mt-4 inline-block p-2"
+            class="text-red-500 mt-4 inline-block p-2"
           >
             <i
-              class="fab fa-linkedin text-2xl hover:text-blue-700 transition-all duration-200 hover:scale-110"
+              class="fab fa-linkedin text-3xl hover:text-red-700 transition-all duration-200 hover:scale-110"
             ></i>
           </a>
         </div>
@@ -174,10 +199,10 @@
           <a
             href="https://ch.linkedin.com/in/elbish-bhusal-a138a41a4"
             target="_blank"
-            class="text-blue-500 mt-4 inline-block p-2"
+            class="text-red-500 mt-4 inline-block p-2"
           >
             <i
-              class="fab fa-linkedin text-2xl hover:text-blue-700 transition-all duration-200 hover:scale-110"
+              class="fab fa-linkedin text-3xl hover:text-red-700 transition-all duration-200 hover:scale-110"
             ></i>
           </a>
         </div>
@@ -192,14 +217,14 @@
             class="w-32 h-32 rounded-full mx-auto mb-4 object-center object-cover"
           />
           <h3 class="text-xl font-semibold">Alek Cvetkovski</h3>
-          <p class="text-gray-400 mt-2 text-sm">Marketing</p>
+          <p class="text-gray-400 mt-2 text-sm">Vertriebsentwickler</p>
           <a
             href="https://ch.linkedin.com/in/alek-cvetkovski-98a964289"
             target="_blank"
-            class="text-blue-500 mt-4 inline-block p-2"
+            class="text-red-500 mt-4 inline-block p-2"
           >
             <i
-              class="fab fa-linkedin text-2xl hover:text-blue-700 transition-all duration-200 hover:scale-110"
+              class="fab fa-linkedin text-3xl hover:text-red-700 transition-all duration-200 hover:scale-110"
             ></i>
           </a>
         </div>
@@ -207,34 +232,34 @@
     </div>
 
     <!-- Testimonials Section -->
-    <div id="reviews" class="py-16 px-6 md:px-12 bg-gray-100">
+    <div id="reviews" class="py-16 px-6 md:px-12 bg-gray-800 ">
       <h2
-        class="text-3xl font-bold text-gray-800 mb-6 text-center"
+        class="text-3xl font-bold text-gray-50 mb-6 text-center"
         data-aos="fade-up"
       >
         Rezensionen
       </h2>
       <div
-        class="max-w-lg mx-auto bg-white shadow-lg rounded-lg p-6 text-center transform hover:scale-105 transition duration-300"
+        class="max-w-lg mx-auto border-2 border-red-400 shadow-lg rounded-lg p-6 text-center transform hover:scale-105 transition duration-300"
         data-aos="fade-up"
       >
         <!-- Testimonial Content -->
-        <p class="text-gray-600 mb-4">
-          "Helvetic IT hat für mich eine Webseite erstellt, und ich bin mehr als
+        <p class="text-gray-300 mb-4">
+          <span class="text-2xl">" </span>Helvetic IT hat für mich eine Webseite erstellt, und ich bin mehr als
           zufrieden. Die Umsetzung war schnell, das Design professionell, und
           der Service erstklassig – auch nach Fertigstellung. Klare Empfehlung
-          für alle, die eine zuverlässige Webagentur suchen!"
+          für alle, die eine zuverlässige Webagentur suchen!<span class="text-2xl"> "</span>
         </p>
-        <h3 class="font-semibold text-xl mb-2">Abdulrahman Mohammad</h3>
+        <h3 class="font-semibold text-xl mb-2 text-gray-50">Abdulrahman Mohammad</h3>
         <p class="text-gray-400 mb-4">CEO, Menzu Pizzahüsli</p>
 
         <!-- Star Rating -->
         <div class="flex justify-center mb-4">
-          <i class="fas fa-star text-yellow-500"></i>
-          <i class="fas fa-star text-yellow-500"></i>
-          <i class="fas fa-star text-yellow-500"></i>
-          <i class="fas fa-star text-yellow-500"></i>
-          <i class="fas fa-star text-yellow-500"></i>
+          <i class="fas fa-star text-red-500"></i>
+          <i class="fas fa-star text-red-500"></i>
+          <i class="fas fa-star text-red-500"></i>
+          <i class="fas fa-star text-red-500"></i>
+          <i class="fas fa-star text-red-500"></i>
         </div>
       </div>
     </div>
@@ -258,18 +283,24 @@
             alt="Screenshot von New Project"
             class="w-full h-48 object-cover"
           />
-          <div class="p-6">
-            <h3 class="text-xl font-semibold mb-2">matteojakob.com</h3>
-            <p class="text-gray-600 mb-4">
-              Ein innovatives Portfolio Webprojekt.
-            </p>
-            <a
-              href="https://www.matteojakob.com/"
-              target="_blank"
-              class="text-blue-600 font-semibold hover:underline"
-            >
-              Projekt ansehen
-            </a>
+          <div class="p-6 flex flex-wrap justify-between">
+            <div class="flex flex-col min-w-80"">
+              <h3 class="text-xl font-semibold mb-2">matteojakob.com</h3>
+              <p class="text-gray-600 mb-4">
+                Ein innovatives Portfolio Webprojekt.
+              </p>
+            </div>
+            <div class="flex justify-end items-center m-2">
+              <a
+                href="https://www.matteojakob.com/"
+                target="_blank"
+                class="text-red-600 font-semibold p-2 flex"
+              >
+                <i
+                  class="fa-solid fa-arrow-up-right-from-square text-3xl hover:scale-110 transition duration-200"
+                ></i>
+              </a>
+            </div>
           </div>
         </div>
         <!-- Projekt 1 -->
@@ -283,18 +314,25 @@
             alt="Screenshot von Menzu Pizza"
             class="w-full h-48 object-cover object-top"
           />
-          <div class="p-6">
-            <h3 class="text-xl font-semibold mb-2">menzu-pizza.ch</h3>
-            <p class="text-gray-600 mb-4">
-              Eine moderne Website für Menzu Pizza.
-            </p>
-            <a
-              href="https://menzu-pizza.ch"
-              target="_blank"
-              class="text-blue-600 font-semibold hover:underline"
-            >
-              Projekt ansehen
-            </a>
+          <div class="p-6 flex flex-wrap justify-between">
+            <div class="flex flex-col min-w-80">
+              <h3 class="text-xl font-semibold mb-2">menzu-pizza.ch</h3>
+              <p class="text-gray-600 mb-4">
+                Eine moderne Website für Menzu Pizza.
+              </p>
+            </div>
+
+            <div class="flex justify-end items-center m-2">
+              <a
+                href="https://www.menzu-pizza.ch/"
+                target="_blank"
+                class="text-red-600 font-semibold p-2 flex"
+              >
+                <i
+                  class="fa-solid fa-arrow-up-right-from-square text-3xl hover:scale-110 transition duration-200"
+                ></i>
+              </a>
+            </div>
           </div>
         </div>
         <!-- Projekt 2 -->
@@ -308,49 +346,58 @@
             alt="Screenshot von Halde20"
             class="w-full h-48 object-cover"
           />
-          <div class="p-6">
-            <h3 class="text-xl font-semibold mb-2">halde20.ch</h3>
-            <p class="text-gray-600 mb-4">Stilvolles Webdesign für Halde20.</p>
-            <a
-              href="https://www.halde20.ch/"
-              target="_blank"
-              class="text-blue-600 font-semibold hover:underline"
-            >
-              Projekt ansehen
-            </a>
+          <div class="p-6 flex flex-wrap justify-between">
+            <div class="flex flex-col min-w-80"">
+              <h3 class="text-xl font-semibold mb-2">halde20.ch</h3>
+              <p class="text-gray-600 mb-4">
+                Stilvolles Webdesign für Restaurant Halde20.
+              </p>
+            </div>
+
+            <div class="flex justify-end items-center m-2">
+              <a
+                href="https://www.halde20.ch/"
+                target="_blank"
+                class="text-red-600 font-semibold p-2 flex"
+              >
+                <i
+                  class="fa-solid fa-arrow-up-right-from-square text-3xl hover:scale-110 transition duration-200"
+                ></i>
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
     <!-- Contact Section -->
-    <div id="contact" class="py-16 px-6 md:px-12 bg-gray-100">
+    <div id="contact" class="py-16 px-6 md:px-12 bg-gray-800">
       <h2
-        class="text-3xl font-bold text-gray-800 mb-6 text-center"
+        class="text-3xl font-bold text-gray-50 mb-6 text-center"
         data-aos="fade-up"
       >
         Kontakt
       </h2>
       <p
-        class="text-gray-600 text-lg mb-4 text-center"
+        class="text-gray-200 text-lg mb-4 text-center"
         data-aos="fade-up"
         data-aos-delay="100"
       >
-        Haben Sie Fragen? Kontaktieren Sie uns!
+        Interessiert? Kontaktieren Sie uns.
       </p>
       <form
         action="contact.php"
         method="POST"
-        class="bg-white shadow-lg rounded-lg p-6 md:w-2/3 lg:w-1/2 mx-auto"
+        class="bg-gray-800 border-2 border-red-400 border-opacity-50  shadow-lg rounded-lg p-6 md:w-2/3 lg:w-1/2 mx-auto"
         data-aos="fade-up"
         data-aos-delay="200"
       >
         <div class="mb-4">
-          <label class="block text-gray-700 font-semibold mb-2" for="name"
+          <label class="block text-gray-300 font-semibold mb-2" for="name"
             >Name</label
           >
           <input
-            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            class="w-full px-4 py-2 border-2 text-gray-200 border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 bg-gray-700"
             type="text"
             id="name"
             name="name"
@@ -359,11 +406,11 @@
           />
         </div>
         <div class="mb-4">
-          <label class="block text-gray-700 font-semibold mb-2" for="email"
+          <label class="block text-gray-300 font-semibold mb-2" for="email"
             >E-Mail</label
           >
           <input
-            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            class="w-full px-4 py-2 border-2 text-gray-200 border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 bg-gray-700"
             type="email"
             id="email"
             name="email"
@@ -372,11 +419,11 @@
           />
         </div>
         <div class="mb-4">
-          <label class="block text-gray-700 font-semibold mb-2" for="message"
+          <label class="block text-gray-300 font-semibold mb-2" for="message"
             >Nachricht</label
           >
           <textarea
-            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            class="w-full px-4 py-2  bg-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
             id="message"
             name="message"
             placeholder="Ihre Nachricht"
@@ -386,17 +433,17 @@
         </div>
         <button
           type="submit"
-          class="w-full bg-slate-800 text-white font-semibold py-3 px-8 rounded-lg hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-500 transition-all duration-300 text-center"
+          class="w-full flex bg-red-500 text-white font-semibold py-3 shadow-md px-8 rounded-lg hover:scale-105 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-slate-500 transition-all duration-300 text-center"
         >
-          Senden
+          <p class="w-full text-center">Senden</p>
         </button>
       </form>
     </div>
 
     <!-- Footer -->
-    <footer class="bg-slate-800 text-gray-400 py-8 text-center">
+    <footer class="bg-gray-900 text-gray-400 py-8 text-center">
       <p>Helvetic IT &copy; 2025. Alle Rechte vorbehalten.</p>
-      <p>Made in Switzerland</p>
+      <img src="img/swiss-software.png" alt="Swiss made software" class="w-48">
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>

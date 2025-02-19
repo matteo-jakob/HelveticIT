@@ -1,3 +1,7 @@
+//////////////////////////////////////
+//         POPUP MESSAGE            //
+//////////////////////////////////////
+
 // Elemente auswählen
 const popup = document.getElementById("popup");
 const popupMessage = document.getElementById("popup-message");
@@ -43,6 +47,10 @@ document.querySelector("form").addEventListener("submit", async (e) => {
   }
 });
 
+//////////////////////////////////////
+//       NAV HAMBURGER MENU         //
+//////////////////////////////////////
+
 const hamburgerButton = document.getElementById("hamburger-button");
 const mobileMenu = document.getElementById("mobile-menu");
 const navLinks = document.querySelectorAll("#mobile-menu a");
@@ -50,6 +58,7 @@ const navLinks = document.querySelectorAll("#mobile-menu a");
 hamburgerButton.addEventListener("click", () => {
   if (mobileMenu.classList.contains("hidden")) {
     mobileMenu.classList.remove("hidden");
+    document.body.classList.add("overflow-hidden");
     setTimeout(() => {
       mobileMenu.classList.remove("-translate-x-full");
       mobileMenu.classList.add("translate-x-0");
@@ -68,6 +77,8 @@ navLinks.forEach((link) => {
 function closeMenu() {
   mobileMenu.classList.remove("translate-x-0");
   mobileMenu.classList.add("-translate-x-full");
+  document.body.classList.remove("overflow-hidden");
+
   mobileMenu.addEventListener(
     "transitionend",
     () => {
@@ -92,4 +103,25 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
       });
     }
   });
+});
+
+//////////////////////////////////////
+//     Nav Hide/Show on scroll      //
+//////////////////////////////////////
+
+let lastScrollTop = 0;
+const navbar = document.querySelector("nav");
+
+window.addEventListener("scroll", () => {
+  let scrollTop = window.scrollY;
+
+  if (scrollTop > lastScrollTop) {
+    // Nach unten scrollen -> Navbar ausblenden
+    navbar.style.transform = "translateY(-100%)";
+  } else {
+    // Nach oben scrollen -> Navbar einblenden
+    navbar.style.transform = "translateY(0)";
+  }
+
+  lastScrollTop = scrollTop;
 });

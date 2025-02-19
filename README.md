@@ -1,7 +1,9 @@
 # HelveticIT
 
-(helveticit.ch)[helveticit.ch]
+[helveticit.ch](https://helveticit.ch/)
 
 ## Getting started
 
-`npx tailwindcss -i ./styles.css -o ./output.css --watch`
+```shell
+npx tailwindcss -i ./styles.css -o ./output.css --watch
+```
