@@ -119,7 +119,7 @@ const navbar = document.querySelector("nav");
 window.addEventListener("scroll", () => {
   let scrollTop = window.scrollY;
 
-  if (scrollTop <= 10) {
+  if (scrollTop <= 20) {
     // Wenn ganz oben, Navbar sicher anzeigen
     navbar.style.transform = "translateY(0)";
   } else if (scrollTop > lastScrollTop) {
