@@ -60,7 +60,8 @@ const navLinks = document.querySelectorAll("#mobile-menu a");
 hamburgerButton.addEventListener("click", () => {
   if (mobileMenu.classList.contains("hidden")) {
     mobileMenu.classList.remove("hidden");
-    document.body.classList.add("overflow-hidden");
+    document.body.style.overflow = "hidden";
+    //document.body.classList.add("overflow-hidden");
     setTimeout(() => {
       mobileMenu.classList.remove("-translate-x-full");
       mobileMenu.classList.add("translate-x-0");
@@ -79,7 +80,8 @@ navLinks.forEach((link) => {
 function closeMenu() {
   mobileMenu.classList.remove("translate-x-0");
   mobileMenu.classList.add("-translate-x-full");
-  document.body.classList.remove("overflow-hidden");
+  document.body.style.overflow = "";
+  //document.body.classList.remove("overflow-hidden");
 
   mobileMenu.addEventListener(
     "transitionend",
