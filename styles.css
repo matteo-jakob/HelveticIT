@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.li-link {
+  @apply border-b-2 h-[20%] text-4xl flex justify-center text-red-500 border-red-500 bg-red-50
+    md:border-0 md:text-gray-800 md:bg-inherit
+    hover:bg-red-100 md:hover:bg-transparent hover:text-red-600 md:text-base 
+    transition duration-200 ease-in;
+}
+
+.round-img {
+  @apply w-32 h-32 rounded-full mx-auto mb-4 object-center object-cover;
+}
+
+.linkedin-link {
+  @apply text-red-500 mt-4 inline-block p-2;
+}
+
+.project-div {
+  @apply bg-white shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300;
+}
