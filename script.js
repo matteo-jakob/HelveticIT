@@ -7,17 +7,19 @@ const popup = document.getElementById("popup");
 const popupMessage = document.getElementById("popup-message");
 const closePopup = document.getElementById("close-popup");
 
-// Funktion, um das Popup anzuzeigen
+// Funktion, um das Popup darzustellen
 function showPopup(message) {
   popupMessage.textContent = message; // Setzt die Nachricht
   popup.classList.remove("hidden"); // Entfernt 'hidden'
   popup.classList.add("flex"); // Fügt 'flex' hinzu, um das Popup sichtbar zu machen
+  document.body.style.overflow = "hidden";
 }
 
 // Funktion, um das Popup zu schließen
 function closePopupHandler() {
   popup.classList.remove("flex"); // Entfernt 'flex'
   popup.classList.add("hidden"); // Fügt 'hidden' hinzu
+  document.body.style.overflow = "";
 }
 
 // Event Listener für den Schließen-Button
