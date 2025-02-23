@@ -12,13 +12,20 @@ function showPopup(message) {
   popupMessage.textContent = message; // Setzt die Nachricht
   popup.classList.remove("hidden"); // Entfernt 'hidden'
   popup.classList.add("flex"); // Fügt 'flex' hinzu, um das Popup sichtbar zu machen
+
   document.body.style.overflow = "hidden";
+  setTimeout(() => {
+    popup.style.opacity = "100%";
+  }, 10);
 }
 
 // Funktion, um das Popup zu schließen
 function closePopupHandler() {
   popup.classList.remove("flex"); // Entfernt 'flex'
   popup.classList.add("hidden"); // Fügt 'hidden' hinzu
+  setTimeout(() => {
+    popup.style.opacity = "0%";
+  }, 10);
   document.body.style.overflow = "";
 }
 
