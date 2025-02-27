@@ -2,13 +2,14 @@
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $name = htmlspecialchars(trim($_POST['name']));
     $email = htmlspecialchars(trim($_POST['email']));
+    $budget = htmlspecialchars(trim($_POST['budget']));
     $message = htmlspecialchars(trim($_POST['message']));
 
     // Validierung
     if (!empty($name) && !empty($email) && !empty($message) && filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $to = "contact@helveticit.ch"; // Ihre E-Mail-Adresse
-        $subject = "Neue Nachricht von $name";
-        $body = "Name: $name\nE-Mail: $email\n\nNachricht:\n$message";
+        $subject = "Neue Nachricht: $name";
+        $body = "Name: $name\nE-Mail: $email\n\nBudget: $budget\n\nNachricht:\n$message";
         $headers = "From: $email";
 
         // E-Mail senden
