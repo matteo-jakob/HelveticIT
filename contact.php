@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     // Validierung
     if (!empty($name) && !empty($email) && !empty($message) && filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $to = "contact@helveticit.ch"; // Ihre E-Mail-Adresse
+        $to = "abmohamm@hotmail.com"; // Ihre E-Mail-Adresse
         $subject = "Neue Nachricht: $name";
         $body = "Name: $name\nE-Mail: $email\n\nBudget: $budget\n\nNachricht:\n$message";
         $headers = "From: $email";
